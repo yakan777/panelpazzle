@@ -88,6 +88,7 @@ document.addEventListener("DOMContentLoaded",()=>{
     const check=()=>{
         let okCount=0;
         for(let i=0;i<panels.length;i++){
+            if(panels[i].textContent==="") continue;
             if(panels[i].posId === parseInt(panels[i].textContent)-1){
             okCount++;
             panels[i].classList.add("ok");
